@@ -1,0 +1,154 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+input {
+    font-weight: bold;
+    font-size: large;
+}
+
+h2 {
+    color: rgb(71, 71, 71);
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    background-color: rgba(220, 220, 220, 0.718);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: auto;
+    margin-top: 3% !important;
+    width: fit-content;
+    text-align: center;
+    z-index: 1;
+}
+
+#game-display {
+    color: #3e0000;
+}
+
+#game-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#start-button {
+    font-size: 18px;
+    color: white;
+    background-color: #ff69b4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    width: 200px;
+    text-align: center;
+}
+
+#start-button:hover {
+    background-color: #ff1493;
+}
+
+#start-button:active {
+    background-color: #e50077;
+}
+
+input {
+    font-size: 18px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+    width: auto;
+    max-width: 150px;
+    text-align: center;
+}
+
+#time-points-container {
+    height: 40px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ff69b4;
+    padding: 5px 20px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#keyboard-container {
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+#keyboard-container div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    font-size: 25px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #ffebee;
+    color: #333;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+button.pressed {
+    background-color: #ff1493;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+button:hover {
+    background-color: #f8bbd0;
+}
+
+button:active {
+    background-color: #f48fb1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}

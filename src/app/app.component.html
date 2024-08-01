@@ -1,0 +1,40 @@
+<div>
+  <img id="background-image" src="../assets/background.jpg" alt="background image">
+
+  <div id="game-container">
+    <div id="game-controls">
+      <button id="start-button" (click)="startGame()">Start Game</button>
+      <input type="text" [(ngModel)]="input">
+      <div id="time-points-container">
+        <h3>Points: {{ point }}</h3>
+        <h3>Time: {{ time }}</h3>
+      </div>
+    </div>
+    <div id="game-display">
+      <h1>{{ word }}</h1>
+      <h2>{{ message }}</h2>
+    </div>
+  </div>
+
+  <div id="keyboard-container">
+    <div *ngFor="let row of buttons; let rowIndex = index">
+      <div [ngSwitch]="rowIndex">
+        <div *ngSwitchCase="0" id="top">
+          <button *ngFor="let letter of row.top" [ngClass]="{'pressed': letter === pressedKey}">
+            {{ letter | uppercase }}
+          </button>
+        </div>
+        <div *ngSwitchCase="1" id="middle">
+          <button *ngFor="let letter of row.middle" [ngClass]="{'pressed': letter === pressedKey}">
+            {{ letter | uppercase }}
+          </button>
+        </div>
+        <div *ngSwitchCase="2" id="bottom">
+          <button *ngFor="let letter of row.bottom" [ngClass]="{'pressed': letter === pressedKey}">
+            {{ letter | uppercase }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
